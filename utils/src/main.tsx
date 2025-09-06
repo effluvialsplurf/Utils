@@ -11,7 +11,10 @@ const Navbar = () => {
         <nav className='w-1/3 h-full text-fuchsia-700 underline bg-blue-400'>
             <ul>
                 <li>
-                    <Link to="/">Home</Link>
+                    <a href="/"><p>Main Site</p></a>
+                </li>
+                <li>
+                    <Link to="/utils">Home</Link>
                 </li>
                 <li>
                     <Link to="/raylib-colorpicker">Raylib Color Generator</Link>
@@ -26,7 +29,7 @@ createRoot(document.getElementById('root')!).render(
         <BrowserRouter>
             <div className='flex flex-row w-screen h-screen'>
                 <Routes>
-                    <Route path="/" element={<Utils />} />
+                    <Route path="/utils" element={<Utils />} />
                     <Route path="/raylib-colorpicker" element={<RaylibColorGen />} />
                 </Routes>
                 <Navbar />
